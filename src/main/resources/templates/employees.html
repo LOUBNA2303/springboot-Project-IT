@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employees list</title>
+    <link rel="stylesheet" href="/webjars/bootstrap/5.3.3/css/bootstrap.min.css">
+
+</head>
+<body>
+<h3>Employe Liste</h3>
+<table class="table">
+    <thead>
+    <tr>
+        <td><strong>ID</strong></td>
+         <td><strong>Name</strong></td>
+         <td><strong>Email</strong></td>
+         <td><strong>Skill</strong></td>
+         <td><strong>Project</strong></td>
+         <td><strong>Action</strong></td>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="e:${listemployees}">
+        <td th:text="${e.id}"></td>
+        <td th:text="${e.name}"></td>
+        <td th:text="${e.email}"></td>
+        <td th:text="${e.skill}"></td>
+        <td th:text="${e.projects}"></td>
+        <td><button>Remove</button></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
